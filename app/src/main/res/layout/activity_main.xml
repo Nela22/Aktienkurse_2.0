@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/tvISIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ISIN"
+        app:layout_constraintEnd_toStartOf="@id/input_ISIN"
+        app:layout_constraintBaseline_toBaselineOf="@id/input_ISIN"
+        />
+
+    <TextView
+        android:id="@+id/tvWKN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WKN"
+        app:layout_constraintEnd_toStartOf="@id/input_WKN"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="193dp"
+        />
+
+    <TextView
+        android:id="@+id/tvAssetname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name of Asset"
+        app:layout_constraintEnd_toStartOf="@id/input_Assetname"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="268dp" />
+
+
+    <EditText
+        android:id="@+id/input_ISIN"
+        android:layout_width="138dp"
+        android:layout_height="45dp"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="108dp" />
+
+    <EditText
+        android:id="@+id/input_WKN"
+        android:layout_width="111dp"
+        android:layout_height="43dp"
+        android:visibility="visible"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvWKN"
+        app:layout_constraintEnd_toEndOf="@id/input_ISIN"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/tvWKN"
+        app:layout_constraintStart_toStartOf="@+id/input_ISIN" />
+
+    <EditText
+        android:id="@+id/input_Assetname"
+        android:layout_width="132dp"
+        android:layout_height="44dp"
+        android:visibility="visible"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvAssetname"
+        app:layout_constraintStart_toEndOf="@id/tvAssetname"
+        app:layout_constraintEnd_toEndOf="@id/input_WKN"
+        app:layout_constraintStart_toStartOf="@+id/input_WKN" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
